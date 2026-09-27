@@ -2,102 +2,142 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>经管阅览室 · Journal Watch</title>
+<title>同舟观潮阅览室 · Journal Watch</title>
 <style>
-:root{--paper:#f6f5f0;--ink:#192f2a;--muted:#697770;--line:#dce1d9;--green:#205a45;--lime:#d9e9bd;--white:#fffefa}
-*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:14px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif}button,input,select{font:inherit}button,a,input,select{outline-offset:4px}button{cursor:pointer}a{color:var(--green)}button{border:1px solid var(--line);border-radius:7px;background:var(--white);color:var(--ink);padding:8px 13px}button:hover{border-color:var(--green)}button.active{background:var(--green);border-color:var(--green);color:white}.shell{display:grid;grid-template-columns:264px minmax(0,1fr);min-height:100vh}.sidebar{padding:32px 23px;border-right:1px solid var(--line);background:#ecefe7}.brand{font-size:21px;font-weight:750;letter-spacing:1px}.brand span{display:inline-block;background:var(--ink);color:var(--lime);border-radius:6px;padding:0 7px;margin-right:7px}.smallcap{font-size:10px;letter-spacing:2px;color:var(--muted);text-transform:uppercase}.nav{display:grid;gap:8px;margin:30px 0}.nav button{text-align:left;padding:11px 13px;background:transparent;border-color:transparent}.nav button.active{background:var(--ink);color:white}.side-label{display:flex;justify-content:space-between;align-items:center;font-size:11px;color:var(--muted);letter-spacing:1px;margin:27px 0 10px}.side-label button{padding:0;border:0;background:transparent;color:var(--green);font-size:11px}.journal{display:flex;align-items:flex-start;gap:9px;padding:9px 0;cursor:pointer}.journal input{accent-color:var(--green);margin-top:5px}.journal strong{font-size:12px;display:block}.journal small{font-size:10px;line-height:1.45;display:block;color:var(--muted)}.side-foot{margin-top:30px;border-top:1px solid var(--line);padding-top:16px;font-size:11px;color:var(--muted)}main{max-width:1280px;width:100%;padding:29px 48px;margin:auto}.topline{display:flex;justify-content:space-between;gap:12px;align-items:center;font-size:11px;color:var(--muted);border-bottom:1px solid var(--line);padding-bottom:19px}.dot{display:inline-block;width:6px;height:6px;background:#6b9776;border-radius:50%;margin-right:6px}.hero{margin:33px 0 26px;display:flex;justify-content:space-between;gap:22px;align-items:end}h1{font-family:Georgia,"Songti SC",SimSun,serif;font-size:39px;font-weight:500;letter-spacing:-1px;margin:8px 0}h1 em{font-style:normal;color:#77926c}.hero p{color:var(--muted);margin:6px 0;max-width:650px}.edition{font:italic 25px Georgia;color:#92a48b}.stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:10px;margin-bottom:29px;background:var(--white)}.stat{padding:17px 23px;border-right:1px solid var(--line)}.stat:last-child{border:0}.stat b{font:28px Georgia;display:block}.stat span{font-size:11px;color:var(--muted)}.toolbar{display:flex;gap:9px;flex-wrap:wrap;align-items:center;margin-bottom:13px}.search{flex:1;min-width:220px;padding:11px 14px;border:1px solid var(--line);background:var(--white);border-radius:7px}select{border:1px solid var(--line);padding:10px;border-radius:7px;background:var(--white);color:var(--ink)}.filters{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:21px}.filters button{font-size:12px;padding:6px 13px}.resultline{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:11px;margin:16px 0}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}.card{border:1px solid var(--line);border-radius:9px;padding:23px;background:var(--white);display:flex;flex-direction:column;min-width:0}.card-top{display:flex;justify-content:space-between;gap:8px;font-size:10px;color:var(--muted)}.tag{background:#edf2e7;color:var(--green);padding:3px 7px;border-radius:4px;font-size:10px;font-weight:700;letter-spacing:.4px}.card h2{font:600 20px/1.4 Georgia,serif;margin:16px 0 8px;overflow-wrap:anywhere}.card h2 a{text-decoration:none;color:var(--ink)}.zh-title{font-size:16px;font-weight:600;line-height:1.6;margin:0 0 9px}.authors{font-size:11px;color:var(--muted);margin-bottom:14px}.abstract{font-size:13px;line-height:1.85;color:#45554c;margin:9px 0}.en-abstract{font-size:12px;line-height:1.75;color:var(--muted)}.card details{margin:9px 0 17px}.card summary{cursor:pointer;color:var(--green);font-size:12px}.card-foot{display:flex;justify-content:space-between;align-items:center;gap:8px;border-top:1px solid var(--line);padding-top:13px;margin-top:auto}.card-foot button{border:0;background:transparent;padding:4px;font-size:11px}.card-foot a{font-size:11px;text-decoration:none}.pending{font-size:11px;color:#8b8468;background:#f5f2e8;padding:7px 9px;border-radius:4px}.notice{padding:11px 14px;background:#ebeede;border:1px solid #dce1c8;border-radius:7px;color:#5b664c;font-size:12px;margin-bottom:20px}.brief-head{padding:27px;background:var(--ink);border-radius:9px;color:var(--white);margin-bottom:19px}.brief-head .smallcap{color:var(--lime)}.brief-head h2{font:28px Georgia,SimSun,serif;margin:9px 0}.brief-head p{color:#c2d0c5;font-size:13px}.reason{border-left:2px solid #a9be89;padding-left:12px;color:var(--green);font-size:12px;margin:12px 0}.empty{padding:55px 25px;text-align:center;border:1px dashed var(--line);border-radius:8px;color:var(--muted)}.more{display:block;margin:24px auto}.hidden{display:none!important}footer{margin:35px 0 6px;padding-top:17px;border-top:1px solid var(--line);font-size:10px;color:var(--muted)}.source-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:14px 0;border-bottom:1px solid var(--line)}.source-row small{color:var(--muted)}@media(min-width:1450px){main{padding:35px 60px}.cards{gap:22px}}@media(max-width:1000px){main{padding:25px}.shell{grid-template-columns:220px minmax(0,1fr)}.sidebar{padding:26px 17px}.cards{grid-template-columns:1fr}.edition{display:none}}@media(max-width:660px){.shell{display:block}.sidebar{border-right:0;border-bottom:1px solid var(--line);padding:18px 20px}.brand{font-size:19px}.nav{display:flex;margin:17px 0 0;gap:3px}.nav button{padding:8px;font-size:12px}.journal-list,.side-label,.side-foot{display:none}.sidebar.show-journals .journal-list{display:grid;grid-template-columns:1fr 1fr;gap:0 15px}.sidebar.show-journals .side-label{display:flex}.mobile-journals{display:inline!important}main{padding:21px 18px}h1{font-size:32px}.hero{margin:25px 0}.stats{margin-bottom:22px}.stat{padding:13px 10px}.stat b{font-size:23px}.stat span{font-size:9px}.card{padding:19px}.topline{font-size:10px}.source-row{grid-template-columns:1fr}}
+:root{--ink:#222;--muted:#727272;--blue:#244f7b;--line:#e4e4e4;--red:#8a493e}
+*{box-sizing:border-box}body{margin:0;background:#fff;color:var(--ink);font:16px/1.75 -apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif}button,input,select{font:inherit;color:inherit}button,a,input,select{outline-offset:4px}button{cursor:pointer;background:white;border:1px solid #ccc;border-radius:2px;padding:6px 12px}button:hover{color:var(--blue);border-color:var(--blue)}button:disabled{cursor:default;color:var(--muted)}a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}.hidden{display:none!important}.shell{max-width:1330px;margin:auto;display:grid;grid-template-columns:265px minmax(0,1fr);min-height:100vh}.sidebar{padding:40px 25px;border-right:1px solid var(--line)}.brand{font:600 24px/1.4 Georgia,"Songti SC",SimSun,serif;white-space:nowrap}.brand-en{font:15px Georgia,serif;color:var(--muted);margin-top:7px}.nav{display:grid;gap:8px;margin:36px 0}.nav button{text-align:left;border:0;padding:7px 0;color:var(--muted)}.nav button.active{font-weight:650;color:var(--blue)}.side-label{font-size:14px;color:var(--muted);margin:28px 0 10px}.subjects{display:grid;gap:3px}.subjects button{display:flex;justify-content:space-between;text-align:left;border:0;border-left:2px solid transparent;padding:8px 9px;font-size:15px}.subjects button.active{border-left-color:var(--blue);color:var(--blue);background:#f6f8fa;font-weight:600}.subjects small{font-size:13px;color:var(--muted);font-weight:400}.mobile-subjects{display:none}main{padding:37px 48px 24px;min-width:0}.topline{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;color:var(--muted);font-size:14px;border-bottom:1px solid var(--line);padding-bottom:16px}.page-head{margin:30px 0 25px}h1{font:500 34px/1.4 Georgia,"Songti SC",SimSun,serif;margin:0 0 9px}.page-head p{color:var(--muted);margin:0;font-size:15px}.toolbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:16px}.search{flex:1;min-width:190px;border:1px solid #ccc;border-radius:2px;padding:8px 11px;background:#fff}select{background:white;border:1px solid #ccc;padding:8px 9px;border-radius:2px;max-width:100%}.filters{display:flex;gap:7px 18px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding:0 0 13px}.filters button{border:0;border-bottom:2px solid transparent;padding:4px 0;font-size:15px;color:#616161}.filters button.active{color:var(--blue);border-bottom-color:var(--blue);font-weight:600}.filter-note{color:var(--muted);font-size:13px;margin:9px 0 14px}.resultline{display:flex;gap:15px;align-items:center;justify-content:space-between;font-size:14px;color:var(--muted);margin:17px 0}.resultline{flex-wrap:wrap}.resultline label{white-space:normal}.resultline input{accent-color:var(--blue)}.paper{padding:25px 0;border-top:1px solid var(--line);overflow-wrap:anywhere}.paper:first-child{border-top:0;padding-top:12px}.paper-meta{display:flex;gap:8px 18px;justify-content:space-between;flex-wrap:wrap;font-size:14px;color:var(--muted)}.journal-name{color:var(--red)}.paper h2{font:600 23px/1.45 Georgia,"Times New Roman",serif;margin:11px 0 6px}.zh-title{font-size:18px;line-height:1.65;font-weight:500;margin:5px 0 9px}.authors{font-size:14px;color:var(--muted);margin:8px 0 13px}.abstract{font-size:16px;line-height:1.95;margin:9px 0}.en-abstract{font:17px/1.8 Georgia,"Times New Roman",serif;color:#505050;margin:9px 0}.reason{font-size:15px;color:#4d4d4d;margin:16px 0 10px}.reason b{font-weight:600;color:var(--red)}.reason .en-abstract{font-size:16px;margin-top:3px}.translation-label,.pending{font-size:13px;color:var(--muted);margin:8px 0}.paper details{margin:13px 0}.paper summary{font-size:14px;color:var(--blue);cursor:pointer;width:fit-content}.paper-foot{display:flex;gap:16px;justify-content:space-between;align-items:baseline;flex-wrap:wrap;margin-top:16px;font-size:14px}.topic-tags{font-size:13px;color:var(--muted)}.brief-heading{padding-bottom:20px;margin-bottom:5px;border-bottom:1px solid var(--line)}.brief-heading h2{font:500 25px Georgia,"Songti SC",SimSun,serif;margin:12px 0 8px}.brief-heading p{font-size:14px;color:var(--muted);margin:6px 0}.brief-heading .brief-date{color:var(--red);font-size:14px}.empty{padding:40px 0;color:var(--muted);font-size:16px}.pagination{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:8px;margin:28px 0}.pagination button{font-size:14px;padding:6px 10px}.pagination button[aria-current="page"]{color:var(--blue);border-color:var(--blue);font-weight:600}.pagination .page-info{font-size:14px;color:var(--muted)}.affiliations{color:var(--muted);font-size:14px;line-height:1.7;margin:0 0 14px}.authors{margin-bottom:5px}.reset{border:0;color:var(--blue);font-size:14px;padding:4px 0}footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:13px;line-height:1.8}footer h2{font-size:16px;font-weight:600;line-height:1.6;margin:0 0 8px}footer ol{margin:0;padding-left:1.6em}footer li{padding-left:3px;margin:6px 0}
+@media(max-width:950px){.shell{grid-template-columns:250px minmax(0,1fr)}.sidebar{padding:30px 18px}main{padding:30px 28px}.brand{font-size:22px}}
+@media(max-width:650px){.shell{display:block}.sidebar{padding:20px;border-right:0;border-bottom:1px solid var(--line)}.brand-en{font-size:14px}.nav{display:flex;gap:25px;margin:18px 0 0}.nav button{padding:4px 0}.side-label,.subjects{display:none}.mobile-subjects{display:block;border:0;color:var(--blue);padding:4px 0;margin-top:12px;font-size:14px}.sidebar.open .subjects{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:10px}main{padding:22px 20px}.topline{font-size:13px}.page-head{margin:25px 0 21px}h1{font-size:30px}.paper h2{font-size:22px}.toolbar{gap:8px}.search{flex-basis:100%}.filters{gap:5px 16px}.resultline{align-items:flex-start}.paper-meta{gap:3px 12px}.paper{padding:23px 0}.zh-title{font-size:17px}}
+
+.coverage{list-style:none;padding:0;margin:12px 0 15px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 22px;font-size:15px;line-height:1.6;color:#5d5d5d}.coverage li{overflow-wrap:anywhere}
+.journal-picker{min-width:0;max-width:100%;margin-left:auto;color:var(--ink)}.journal-picker summary{cursor:pointer;color:var(--blue);font-size:15px;padding:5px 0}.journal-picker[open]{width:100%;margin-left:0}.journal-options{border:1px solid var(--line);padding:16px;margin-top:8px}.journal-actions{display:flex;gap:16px;margin-bottom:12px}.journal-actions button{border:0;padding:0;color:var(--blue);font-size:14px}.journal-checks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 24px}.journal-checks label{display:flex;align-items:flex-start;gap:9px;font-size:15px;cursor:pointer;line-height:1.6}.journal-checks input{margin-top:5px;flex-shrink:0;width:16px;height:16px}.journal-checks span{overflow-wrap:anywhere}.journal-checks small{display:block;color:var(--muted);font-size:13px}
+@media(max-width:650px){.coverage,.journal-checks{grid-template-columns:1fr}.coverage{font-size:15px;gap:6px}.journal-picker{margin-left:0}.resultline{display:block}.journal-options{padding:12px}.journal-picker summary{margin-top:8px}}
 </style>
 </head>
 <body>
 <div class="shell">
 <aside class="sidebar">
-<div class="brand"><span>阅</span>经管阅览室</div><div class="smallcap" style="margin:7px 0 0 39px">Journal Watch / Personal</div>
-<nav class="nav" aria-label="主导航"><button data-tab="library" class="active">◫ &nbsp; 论文库</button><button data-tab="brief">☷ &nbsp; 双语简报</button><button data-tab="saved">☆ &nbsp; 我的收藏</button><button data-tab="sources">↗ &nbsp; 数据状态</button></nav>
-<button class="mobile-journals hidden" id="mobileJournals">选择期刊</button>
-<div class="side-label">关注的来源 <button id="allJournals">全部选择</button></div>
-<div class="journal-list" id="journals"></div>
-<div class="side-foot">为持续阅读留一个入口。<br>11 本期刊 + NBER 工作论文<br><br>英文原始信息与中文翻译并列；<br>研究判断请回到论文原文。</div>
+<div class="brand">同舟观潮阅览室</div><div class="brand-en">Journal Watch</div>
+<nav class="nav" aria-label="主导航"><button data-tab="brief">每日简报</button><button data-tab="library">论文库</button></nav>
+<div class="side-label">按学科浏览</div><button class="mobile-subjects" id="mobileSubjects" aria-expanded="false">按学科浏览 ▾</button>
+<nav class="subjects" id="subjects" aria-label="学科筛选"></nav>
 </aside>
 <main>
-<div class="topline"><span><span class="dot"></span>YOUR RESEARCH, IN FOCUS</span><span id="updated">正在读取本地数据</span></div>
-<header class="hero"><div><div class="smallcap">A quieter way to keep up</div><h1>读新知，<em>有重点。</em></h1><p>追踪顶尖期刊与 NBER 工作论文，让阅读成为持续的习惯。</p></div><div class="edition">Research Notes</div></header>
-<section class="stats" aria-label="收录统计"><div class="stat"><b id="sourceCount">12</b><span>关注来源 / SOURCES</span></div><div class="stat"><b id="total">—</b><span>收录文章 / ARTICLES</span></div><div class="stat"><b id="bilingual">—</b><span>双语条目 / BILINGUAL</span></div><div class="stat"><b id="savedCount">0</b><span>稍后阅读 / SAVED</span></div></section>
-<div id="notice" class="notice hidden" role="status"></div>
-<section id="libraryView">
-<div class="toolbar"><label class="hidden" for="search">搜索文章</label><input id="search" class="search" type="search" aria-label="搜索标题、作者或摘要" placeholder="搜索标题、作者、摘要或 DOI…"><select id="period" aria-label="时间范围"><option value="all">全部日期</option><option value="30">近 30 天</option><option value="90">近 90 天</option><option value="365">近一年</option></select><select id="language" aria-label="显示语言"><option value="both">中英双语</option><option value="en">English</option><option value="zh">中文优先</option></select></div>
-<div class="filters" id="filters"><button class="active" data-field="">全部学科</button><button data-field="经济学">经济学</button><button data-field="金融学">金融学</button><button data-field="管理学">管理学</button><button data-field="工作论文">NBER 工作论文</button><button id="translatedOnly" aria-pressed="false">仅看已有中文</button><button id="unreadOnly" aria-pressed="false">仅看未读</button></div>
-<div class="resultline"><span id="resultCount" aria-live="polite"></span><span>优先在线发表日期 · 最新在前</span></div>
-<div id="cards" class="cards"></div><button id="more" class="more hidden">加载更多文章</button>
+<div class="topline"><span>经济学 · 金融学 · 管理学</span><span id="updated"></span></div>
+<header class="page-head"><h1 id="pageTitle">每日简报</h1><ul id="journalCoverage" class="coverage hidden" aria-label="当前学科涵盖的期刊"></ul><p id="pageDescription"></p></header>
+<section id="libraryView" class="hidden">
+<div class="toolbar"><input id="search" class="search" type="search" aria-label="搜索标题、作者或摘要" placeholder="搜索标题、作者、摘要或 DOI"><select id="period" aria-label="时间范围"><option value="all">全部日期</option><option value="30">近 30 天</option><option value="90">近 90 天</option><option value="365">近一年</option></select></div>
+<nav class="filters" id="filters" aria-label="主题筛选"></nav>
+<p class="filter-note">主题按标题与摘要中的关键词初步归类；同一篇文章可属于多个主题。</p>
+<div class="resultline"><span id="resultCount" aria-live="polite"></span><details class="journal-picker" id="journalPicker"><summary id="journalSummary">期刊挑选 · 全部</summary><div class="journal-options"><div class="journal-actions"><button id="selectAllJournals" type="button">全选</button><button id="clearJournals" type="button">清空</button></div><div class="journal-checks" id="journalChecks" role="group" aria-label="选择期刊，可多选"></div></div></details></div>
+<div id="cards" tabindex="-1"></div><nav id="pagination" class="pagination" aria-label="论文库分页"></nav>
 </section>
-<section id="briefView" class="hidden"><div class="toolbar"><label for="briefDate">简报日期</label><select id="briefDate"></select><button id="downloadBrief">导出 Markdown</button></div><div id="briefBody"></div></section>
-<section id="sourcesView" class="hidden"><h2>数据与更新状态</h2><p>每次获取各刊按发表日期排序的最近 100 条记录；NBER 获取官方 RSS 当前一批工作论文，按 DOI 去重并保留历史。工作论文尚未经过期刊同行评审。此列表不是完整期刊档案，Crossref 收录也可能晚于出版社。</p><div id="sources"></div><p class="abstract">文章与双语简报由本地 Qwen 辅助整理。原始来源未提供摘要时会明确标注；工作论文的版本与结论可能继续修订。</p></section>
-<footer>JOURNAL WATCH &nbsp; / &nbsp; 元数据来自 <a href="https://www.crossref.org/" target="_blank" rel="noopener">Crossref</a> / <a href="https://www.nber.org/" target="_blank" rel="noopener">NBER</a> · 原文链接指向出版机构 · 收藏与已读保存在当前浏览器 · 中文内容为机器辅助翻译</footer>
+<section id="briefView"><div class="toolbar"><label for="briefDate">往期与今日</label><select id="briefDate"></select><button id="downloadBrief">导出简报</button></div><div id="briefBody"></div></section>
+<footer><h2>网页声明：</h2><ol><li>文章版权归原作者与原期刊（或发布机构）所有，本推送仅用于学术交流。论文全文请通过原文链接访问。</li><li>中文翻译及精选摘要由模型辅助生成，可能存在偏差，请以原文为准。NBER 工作论文尚未经过期刊同行评审。</li><li>JOURNAL WATCH · 元数据来源：<a href="https://www.crossref.org/" target="_blank" rel="noopener">Crossref</a> / <a href="https://www.nber.org/" target="_blank" rel="noopener">NBER</a></li></ol></footer>
 </main></div>
 <script src="data.js"></script>
 <script>
 "use strict";
-const data=window.JOURNAL_DATA||{articles:[],journals:[],briefs:[]};
+const data=window.JOURNAL_DATA||{articles:[],journals:[],briefs:[],topics:[]};
 const $=id=>document.getElementById(id);
 const esc=v=>String(v??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const articles=data.articles.filter(a=>["abstract","title_zh","abstract_zh"].every(k=>typeof a[k]==="string"&&a[k].trim()));
+const articleMap=new Map(articles.map(a=>[a.doi,a]));
 const journalMap=Object.fromEntries(data.journals.map(j=>[j.code,j]));
-let tab="brief",field="",limit=24,translated=false,unread=false;
-const selected=new Set(data.journals.map(j=>j.code));
-let marks={};
-try{marks=JSON.parse(localStorage.getItem("journal-watch-marks")||"{}");if(!marks||typeof marks!=="object"||Array.isArray(marks))marks={};}catch{}
-function persist(){try{localStorage.setItem("journal-watch-marks",JSON.stringify(marks));}catch{$("notice").textContent="浏览器不允许保存阅读记录；当前页面仍可使用。";$("notice").classList.remove("hidden");}}
-function updateStats(){$("sourceCount").textContent=data.journals.length;$("total").textContent=data.articles.length.toLocaleString();$("bilingual").textContent=data.articles.filter(a=>a.title_zh).length;$("savedCount").textContent=data.articles.filter(a=>marks[a.doi]?.saved).length;}
-function card(a,reason){
-const lang=$("language").value,mark=marks[a.doi]||{},zh=lang!=="en",en=lang!=="zh"||!a.title_zh;
-const date=a.date||"日期未提供"; const future=a.date&&a.date>new Date().toLocaleDateString("en-CA");
-return '<article class="card"><div class="card-top"><span class="tag">'+esc(a.journal)+'</span><span>'+esc(date)+' · '+esc(a.date_kind)+(future?' · 预排期':'')+'</span></div>'+
-(en?'<h2><a href="'+esc(a.url)+'" target="_blank" rel="noopener">'+esc(a.title)+'</a></h2>':'')+
-(zh&&a.title_zh?'<p class="zh-title" style="margin-top:12px">'+esc(a.title_zh)+'</p>':'')+
-'<div class="authors">'+esc(a.authors.join(' · ')||"作者信息未提供")+'</div>'+
-(reason?'<div class="reason"><b>为什么值得读 / Why read</b><br>'+esc(reason.reason_zh)+'<br><span class="en-abstract">'+esc(reason.reason_en)+'</span></div><p class="abstract">'+esc(reason.summary_zh)+'</p><p class="en-abstract">'+esc(reason.summary_en)+'</p>':'')+
-(zh&&a.abstract_zh?'<p class="en-abstract">'+esc(a.translation_source||"中文译文")+'</p><p class="abstract">'+esc(a.abstract_zh)+'</p>':zh?'<p class="pending">'+(a.abstract?'中文翻译待生成；可展开英文摘要。':'数据源未提供摘要，请查看论文原文。')+'</p>':'')+
-(a.abstract?'<details'+(lang==="en"?' open':'')+'><summary>英文原摘要 / Original abstract</summary><p class="en-abstract">'+esc(a.abstract)+'</p></details>':'<p class="en-abstract">Abstract unavailable in source metadata.</p>')+
-'<div class="card-foot"><div><button data-action="saved" data-doi="'+esc(a.doi)+'" aria-pressed="'+!!mark.saved+'">'+(mark.saved?'★ 已收藏':'☆ 收藏')+'</button><button data-action="read" data-doi="'+esc(a.doi)+'" aria-pressed="'+!!mark.read+'">'+(mark.read?'✓ 已读':'标为已读')+'</button></div><a href="'+esc(a.url)+'" target="_blank" rel="noopener">阅读原文 ↗</a></div></article>';
+const subjects=[["","全部学科"],["经济学","经济学"],["金融学","金融学"],["管理学","管理学"],["工作论文","NBER 工作论文"]];
+let tab="brief",field="",topic="",currentPage=1;
+const pageSize=10;
+let selectedJournals=null; // null includes all journals in the current subject; an empty Set includes none.
+function availableJournals(){return data.journals.filter(j=>!field||j.field===field);}
+function renderJournalChoices(){
+ const journals=availableJournals();
+ $('journalCoverage').innerHTML=journals.map(j=>'<li>'+esc(j.title)+'</li>').join('');
+ $('journalChecks').innerHTML=journals.map(j=>'<label><input type="checkbox" value="'+esc(j.code)+'"'+(!selectedJournals||selectedJournals.has(j.code)?' checked':'')+'><span>'+esc(j.code)+' · '+esc(j.title)+' ('+articles.filter(a=>a.journal===j.code).length+')</span></label>').join('');
+ updateJournalSummary();
+}
+function updateJournalSummary(){
+ const journals=availableJournals(),chosen=journals.filter(j=>!selectedJournals||selectedJournals.has(j.code));
+ $('journalSummary').textContent='期刊挑选 · '+(chosen.length===journals.length?'全部（'+journals.length+'）':chosen.length?'已选 '+chosen.map(j=>j.code).join('、'):'未选择期刊');
+}
+function affiliationLines(a){
+ const details=a.author_details||[];
+ if(!details.some(person=>person.affiliations?.some(unit=>typeof unit==='string'&&unit.trim())))return ['作者单位暂缺'];
+ return (a.authors||[]).map((name,i)=>{
+  const person=details[i]?.name===name?details[i]:details.find(person=>person.name===name);
+  const units=(person?.affiliations||[]).filter(unit=>typeof unit==='string'&&unit.trim());
+  return name+'：'+(units.length?units.join('；'):'作者单位暂缺');
+ });
+}
+function card(a,pick){
+ const topics=a.topics||["其他"],journal=journalMap[a.journal];
+ return '<article class="paper" data-doi="'+esc(a.doi)+'"><div class="paper-meta"><span class="journal-name" title="'+esc(journal?.title||a.journal)+'">'+esc(a.journal)+' · '+esc(journal?.title||"")+'</span><span>'+esc(a.date||"日期未提供")+' · '+esc(a.date_kind||"")+'</span></div>'+
+ '<h2><a href="'+esc(a.url)+'" target="_blank" rel="noopener">'+esc(a.title)+'</a></h2>'+
+ '<p class="zh-title">'+esc(a.title_zh)+'</p>'+
+ '<p class="authors">'+esc((a.authors||[]).join(' · ')||"作者信息未提供")+'</p>'+
+ '<div class="affiliations">'+affiliationLines(a).map(esc).join('<br>')+'</div>'+
+ (pick?'<div class="reason"><b>阅读理由</b> '+esc(pick.reason_zh)+'<p class="en-abstract">'+esc(pick.reason_en)+'</p></div><p class="abstract">'+esc(pick.summary_zh)+'</p><p class="en-abstract">'+esc(pick.summary_en)+'</p>':'')+
+ (!pick?'<p class="abstract">'+esc(a.abstract_zh)+'</p>':'')+
+ (pick&&a.abstract_zh?'<details><summary>完整中文摘要</summary><p class="abstract">'+esc(a.abstract_zh)+'</p></details>':'')+
+ '<details><summary>英文原摘要 / Original abstract</summary><p class="en-abstract">'+esc(a.abstract)+'</p></details>'+
+ '<div class="paper-foot"><span class="topic-tags">'+topics.map(esc).join(' · ')+'</span><a href="'+esc(a.url)+'" target="_blank" rel="noopener">阅读原文 ↗</a></div></article>';
 }
 function filtered(){
-const q=$("search").value.trim().toLowerCase(),days=$("period").value,cutoff=new Date();cutoff.setDate(cutoff.getDate()-Number(days));cutoff.setHours(0,0,0,0);
-return data.articles.filter(a=>{
-const stamp=a.date.length===10?new Date(a.date+"T00:00:00"):null;
-return selected.has(a.journal)&&(!field||journalMap[a.journal]?.field===field)&&(!translated||a.title_zh)&&(!unread||!marks[a.doi]?.read)&&(tab!=="saved"||marks[a.doi]?.saved)&&(days==="all"||(stamp&&stamp>=cutoff&&stamp<=new Date()))&&(!q||[a.title,a.title_zh,a.abstract,a.abstract_zh,...a.authors,a.doi].join(" ").toLowerCase().includes(q));});
+ const q=$("search").value.trim().toLowerCase(),days=$("period").value,cutoff=new Date();cutoff.setDate(cutoff.getDate()-Number(days));cutoff.setHours(0,0,0,0);
+ return articles.filter(a=>{
+  const stamp=a.date?.length===10?new Date(a.date+"T00:00:00"):null;
+  return (!field||journalMap[a.journal]?.field===field)&&(!topic||(a.topics||["其他"]).includes(topic))&&(!selectedJournals||selectedJournals.has(a.journal))&&(days==="all"||(stamp&&stamp>=cutoff&&stamp<=new Date()))&&(!q||[a.title,a.title_zh,a.abstract,a.abstract_zh,...(a.authors||[]),a.doi].join(" ").toLowerCase().includes(q));
+ });
 }
+function setTab(value){tab=value;currentPage=1;render();}
 function render(){
-updateStats();
-$("libraryView").classList.toggle("hidden",!["library","saved"].includes(tab));
-$("briefView").classList.toggle("hidden",tab!=="brief");$("sourcesView").classList.toggle("hidden",tab!=="sources");
-if(tab==="brief"){renderBrief();return;}if(tab==="sources")return;
-const rows=filtered();$("resultCount").textContent=(tab==="saved"?"我的收藏 · ":"")+rows.length+" 篇文章";
-$("cards").innerHTML=rows.length?rows.slice(0,limit).map(a=>card(a)).join(""):'<div class="empty">没有符合条件的文章。可以切换期刊、时间范围或关键词。</div>';
-$("more").classList.toggle("hidden",rows.length<=limit);
+ document.querySelectorAll('[data-tab]').forEach(b=>{b.classList.toggle('active',b.dataset.tab===tab);b.setAttribute('aria-pressed',b.dataset.tab===tab);});
+ document.querySelectorAll('[data-field]').forEach(b=>{const active=b.dataset.field===field&&tab==='library';b.classList.toggle('active',active);b.setAttribute('aria-pressed',active);});
+ document.querySelectorAll('[data-topic]').forEach(b=>{b.classList.toggle('active',b.dataset.topic===topic);b.setAttribute('aria-pressed',b.dataset.topic===topic);});
+ $('libraryView').classList.toggle('hidden',tab!=='library');$('briefView').classList.toggle('hidden',tab!=='brief');
+ $('pageTitle').textContent=tab==='brief'?'每日简报':(field?subjects.find(x=>x[0]===field)[1]+' · 论文库':'论文库');
+ $('journalCoverage').classList.toggle('hidden',tab!=='library');
+ $('pageDescription').classList.toggle('hidden',tab==='library');
+ $('pageDescription').textContent=tab==='brief'?'从近期论文中挑选值得读的研究。':'';
+ if(tab==='brief'){renderBrief();return;}
+ updateJournalSummary();
+ const rows=filtered();const totalPages=Math.max(1,Math.ceil(rows.length/pageSize));currentPage=Math.min(currentPage,totalPages);$('resultCount').textContent=[subjects.find(x=>x[0]===field)[1],topic||'全部主题',rows.length+' 篇文章'].join(' / ');
+ $('cards').innerHTML=rows.length?rows.slice((currentPage-1)*pageSize,currentPage*pageSize).map(a=>card(a)).join(''):'<div class="empty">没有符合当前条件的文章。<br><button class="reset" id="resetFilters">清除筛选，查看全部论文</button></div>';
+ renderPagination(rows.length,totalPages);
+ if($('resetFilters'))$('resetFilters').onclick=()=>{field='';topic='';$('search').value='';$('period').value='all';selectedJournals=null;renderJournalChoices();currentPage=1;render();};
 }
-function currentBrief(){return (data.briefs||[]).find(b=>b.date===$("briefDate").value);}
+function renderPagination(count,total){
+ $('pagination').classList.toggle('hidden',count===0);
+ if(!count){$('pagination').innerHTML='';return;}
+ const numbers=[...new Set([1,...Array.from({length:5},(_,i)=>currentPage+i-2).filter(n=>n>=1&&n<=total),total])].sort((a,b)=>a-b);
+ let last=0;
+ const buttons=numbers.map(n=>{const gap=last&&n-last>1?'<span aria-hidden="true">…</span>':'';last=n;return gap+'<button data-page="'+n+'" aria-label="第 '+n+' 页"'+(n===currentPage?' aria-current="page"':'')+'>'+n+'</button>';}).join('');
+ $('pagination').innerHTML='<button data-page="'+(currentPage-1)+'"'+(currentPage===1?' disabled':'')+'>上一页</button>'+buttons+'<button data-page="'+(currentPage+1)+'"'+(currentPage===total?' disabled':'')+'>下一页</button><span class="page-info" aria-live="polite">第 '+currentPage+' / '+total+' 页 · 每页 10 篇</span>';
+}
+function currentBrief(){return (data.briefs||[]).find(b=>b.date===$('briefDate').value);}
+function briefPicks(b){return b.picks.map(p=>({p,a:articleMap.get(p.doi)})).filter(x=>x.a);}
 function renderBrief(){
-const b=currentBrief();$("downloadBrief").disabled=!b;
-if(!b){$("briefBody").innerHTML='<div class="empty">还没有生成简报。接入模型服务后，可按天生成中英文精选与阅读理由。</div>';return;}
-const picks=b.picks.map(p=>({p,a:data.articles.find(a=>a.doi===p.doi)})).filter(x=>x.a);
-$("briefBody").innerHTML='<div class="brief-head"><div class="smallcap">'+esc(b.date)+' / '+esc(b.kind||"DAILY READING")+'</div><h2>'+esc(b.title_zh)+'</h2><p>'+esc(b.title_en)+'</p><p>'+esc(b.note_zh||"")+'</p><p>'+esc(b.note_en||"")+'</p></div><div class="cards">'+picks.map(x=>card(x.a,x.p)).join("")+'</div>';
+ const b=currentBrief();$('downloadBrief').disabled=!b;
+ if(!b){$('briefBody').innerHTML='<div class="empty">简报尚未生成。可以先从左侧进入论文库阅读。</div>';return;}
+ const picks=briefPicks(b);
+ $('briefBody').innerHTML='<div class="brief-heading"><span class="brief-date">'+esc(b.date)+' · '+picks.length+' 篇精选</span><h2>'+esc(b.title_zh)+'</h2><p>'+esc(b.title_en)+'</p><p>'+esc(b.note_zh||'根据论文标题与摘要整理，阅读理由供参考。')+'</p><p>'+esc(b.note_en||'')+'</p></div>'+(picks.length?picks.map(x=>card(x.a,x.p)).join(''):'<div class="empty">本期暂无新的匹配精选，仍可浏览论文库和往期简报。</div>');
 }
-$("journals").innerHTML=data.journals.map(j=>'<label class="journal"><input type="checkbox" value="'+esc(j.code)+'" checked><span><strong>'+esc(j.code)+'</strong><small>'+esc(j.title)+'</small></span></label>').join("");
-$("journals").addEventListener("change",e=>{e.target.checked?selected.add(e.target.value):selected.delete(e.target.value);limit=24;render();});
-$("allJournals").onclick=()=>{data.journals.forEach(j=>selected.add(j.code));document.querySelectorAll(".journal input").forEach(x=>x.checked=true);render();};
-document.querySelectorAll("[data-tab]").forEach(b=>b.onclick=()=>{tab=b.dataset.tab;document.querySelectorAll("[data-tab]").forEach(x=>x.classList.toggle("active",x===b));limit=24;render();});
-$("filters").addEventListener("click",e=>{const b=e.target.closest("[data-field]");if(!b)return;field=b.dataset.field;document.querySelectorAll("[data-field]").forEach(x=>x.classList.toggle("active",x===b));limit=24;render();});
-for(const id of ["search","period","language"])$(id).addEventListener(id==="search"?"input":"change",()=>{limit=24;render();});
-$("translatedOnly").onclick=()=>{translated=!translated;$("translatedOnly").classList.toggle("active",translated);$("translatedOnly").setAttribute("aria-pressed",translated);limit=24;render();};
-$("unreadOnly").onclick=()=>{unread=!unread;$("unreadOnly").classList.toggle("active",unread);$("unreadOnly").setAttribute("aria-pressed",unread);limit=24;render();};
-$("more").onclick=()=>{limit+=24;render();};
-document.addEventListener("click",e=>{const b=e.target.closest("[data-action]");if(!b)return;const doi=b.dataset.doi;marks[doi]||={};marks[doi][b.dataset.action]=!marks[doi][b.dataset.action];persist();render();});
-$("mobileJournals").onclick=()=>document.querySelector(".sidebar").classList.toggle("show-journals");
-$("briefDate").innerHTML=(data.briefs||[]).map(b=>'<option value="'+esc(b.date)+'">'+esc(b.date)+'</option>').join("");$("briefDate").onchange=renderBrief;
-$("downloadBrief").onclick=()=>{const b=currentBrief();if(!b)return;const text=["# "+b.title_zh,b.title_en,b.date,b.note_zh,b.note_en,...b.picks.flatMap(p=>{const a=data.articles.find(a=>a.doi===p.doi);return a?["\n## "+(a.title_zh||a.title),a.title,a.authors.join(", "),a.url,p.summary_zh,p.summary_en,"为什么值得读："+p.reason_zh,"Why read: "+p.reason_en]:[];})].join("\n\n");const url=URL.createObjectURL(new Blob([text],{type:"text/markdown;charset=utf-8"}));const a=document.createElement("a");a.href=url;a.download="journal-brief-"+b.date+".md";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
-$("sources").innerHTML=data.journals.map(j=>'<div class="source-row"><div><b>'+esc(j.code)+'</b> · '+esc(j.title)+'<br><small>'+esc(j.issn?'ISSN '+j.issn:'NBER 官方工作论文')+'</small></div><div>'+esc(j.error?"更新失败："+j.error:"已接通 · 本次 "+j.fetched+" 条")+'<br><small>最近成功：'+esc(j.last_success?new Date(j.last_success).toLocaleString("zh-CN"):"尚未成功")+'</small></div></div>').join("");
-$("updated").textContent=data.updated_at?"数据更新于 "+new Date(data.updated_at).toLocaleString("zh-CN"):"尚未获取数据";
-const failures=data.journals.filter(j=>j.error);
-if(!data.articles.length||failures.length){$("notice").textContent=!data.articles.length?"尚无文章数据，请先运行 update.ps1。":failures.map(j=>j.code).join("、")+" 本轮更新失败，仍显示已保存的数据。";$("notice").classList.remove("hidden");}
-document.querySelectorAll("[data-tab]").forEach(b=>b.classList.toggle("active",b.dataset.tab===tab));
+$('subjects').innerHTML=subjects.map(([value,label])=>'<button data-field="'+esc(value)+'"><span>'+esc(label)+'</span><small>'+articles.filter(a=>!value||journalMap[a.journal]?.field===value).length+'</small></button>').join('');
+$('filters').innerHTML=['',...(data.topics||[])].map(t=>'<button data-topic="'+esc(t)+'">'+esc(t||'全部主题')+'</button>').join('');
+$('subjects').addEventListener('click',e=>{const b=e.target.closest('[data-field]');if(!b)return;field=b.dataset.field;if(selectedJournals){const allowed=new Set(availableJournals().map(j=>j.code));selectedJournals=new Set([...selectedJournals].filter(code=>allowed.has(code)));if(!selectedJournals.size)selectedJournals=null;}renderJournalChoices();setTab('library');});
+$('filters').addEventListener('click',e=>{const b=e.target.closest('[data-topic]');if(!b)return;topic=b.dataset.topic;currentPage=1;render();});
+for(const id of ['search','period'])$(id).addEventListener(id==='search'?'input':'change',()=>{currentPage=1;render();});
+document.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>setTab(b.dataset.tab));
+$('journalChecks').addEventListener('change',e=>{const input=e.target.closest('input[type="checkbox"]');if(!input)return;if(!selectedJournals)selectedJournals=new Set(availableJournals().map(j=>j.code));input.checked?selectedJournals.add(input.value):selectedJournals.delete(input.value);if(selectedJournals.size===availableJournals().length)selectedJournals=null;currentPage=1;render();});
+$('selectAllJournals').onclick=()=>{selectedJournals=null;renderJournalChoices();currentPage=1;render();};
+$('clearJournals').onclick=()=>{selectedJournals=new Set();renderJournalChoices();currentPage=1;render();};
+$('journalPicker').addEventListener('keydown',e=>{if(e.key==='Escape'){$('journalPicker').open=false;$('journalSummary').focus();}});
+$('pagination').onclick=e=>{const button=e.target.closest('[data-page]');if(!button||button.disabled)return;currentPage=Number(button.dataset.page);render();$('cards').focus({preventScroll:true});$('cards').scrollIntoView({block:'start'});};
+$('mobileSubjects').onclick=()=>{const open=document.querySelector('.sidebar').classList.toggle('open');$('mobileSubjects').setAttribute('aria-expanded',open);};
+$('briefDate').innerHTML=(data.briefs||[]).map(b=>'<option value="'+esc(b.date)+'">'+esc(b.date)+'</option>').join('');$('briefDate').onchange=renderBrief;
+$('downloadBrief').onclick=()=>{const b=currentBrief();if(!b)return;const text=['# '+b.title_zh,b.title_en,b.date,b.note_zh,b.note_en,...briefPicks(b).flatMap(({a,p})=>['\n## '+(a.title_zh||a.title),a.title,(a.authors||[]).join(', '),...affiliationLines(a),a.url,p.summary_zh,p.summary_en,'阅读理由：'+p.reason_zh,'Why read: '+p.reason_en]),'文章版权归原作者与原期刊（或发布机构）所有，本推送仅用于学术交流。'].join('\n\n');const url=URL.createObjectURL(new Blob([text],{type:'text/markdown;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download='journal-brief-'+b.date+'.md';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
+$('updated').textContent=data.updated_at?'更新于 '+new Date(data.updated_at).toLocaleDateString('zh-CN'):'';
+renderJournalChoices();
 render();
 </script>
-</body></html>
+</body>
+</html>
